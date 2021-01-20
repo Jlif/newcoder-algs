@@ -1,4 +1,4 @@
-package tech.jiangchen;
+package tech.jiangchen.list;
 
 import java.util.Arrays;
 import java.util.HashMap;
