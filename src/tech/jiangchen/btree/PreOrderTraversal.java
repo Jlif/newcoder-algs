@@ -13,7 +13,7 @@ import java.util.List;
  */
 public class PreOrderTraversal {
 
-    //递归法
+    //递归法前序遍历
     public List<Integer> preOrderTraversal1(TreeNode root) {
         List<Integer> result = new ArrayList<>();
         preOrder(root, result);
@@ -29,7 +29,7 @@ public class PreOrderTraversal {
         preOrder(root.right, result);
     }
 
-    //迭代法
+    //迭代法前序遍历
     public List<Integer> preOrderTraversal2(TreeNode root) {
         List<Integer> result = new ArrayList<>();
         if (root == null) {

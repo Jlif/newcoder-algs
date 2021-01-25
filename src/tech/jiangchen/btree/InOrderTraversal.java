@@ -13,7 +13,7 @@ import java.util.List;
  */
 public class InOrderTraversal {
 
-    //递归法
+    //递归法中序遍历
     public List<Integer> inOrderTraversal1(TreeNode root) {
         List<Integer> result = new ArrayList<>();
         inorder(root, result);
@@ -30,6 +30,7 @@ public class InOrderTraversal {
     }
 
 
+    //迭代法中序遍历
     public List<Integer> inOrderTraversal2(TreeNode root) {
         List<Integer> result = new ArrayList<>();
         Deque<TreeNode> stack = new LinkedList<>();

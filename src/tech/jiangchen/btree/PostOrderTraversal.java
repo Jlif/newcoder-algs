@@ -13,6 +13,7 @@ import java.util.List;
  */
 public class PostOrderTraversal {
 
+    //递归法后序遍历
     public List<Integer> postOrderTraversal1(TreeNode root) {
         List<Integer> result = new ArrayList<>();
         postOrder(root, result);
@@ -29,6 +30,7 @@ public class PostOrderTraversal {
     }
 
 
+    //迭代法后序遍历
     public List<Integer> postOrderTraversal2(TreeNode root) {
         List<Integer> result = new ArrayList<>();
         if (root == null) {
