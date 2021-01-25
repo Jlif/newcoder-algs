@@ -40,27 +40,27 @@ public class QuickSort {
     }
 
     private static int partition(int[] a, int p, int r) {
-        System.out.println(Arrays.toString(a));
         int pivot = a[r];
-        int i = p;
-        for (int j = p; j < r; ++j) {
-            if (a[j] < pivot) {
-                if (i == j) {
-                    ++i;
+        int location = p;
+        for (int i = p; i < r; i++) {
+            if (a[i] < pivot) {
+                if (location == i) {
+                    location++;
                 } else {
-                    int tmp = a[i];
-                    a[i++] = a[j];
-                    a[j] = tmp;
+                    swap(a, i, location++);
                 }
             }
         }
 
-        int tmp = a[i];
-        a[i] = a[r];
-        a[r] = tmp;
+        swap(a, r, location);
 
-        System.out.println(Arrays.toString(a) + "====");
-        return i;
+        return location;
+    }
+
+    public static void swap(int[] a, int p, int q) {
+        int tmp = a[p];
+        a[p] = a[q];
+        a[q] = tmp;
     }
 
     public static void main(String[] args) {
