@@ -3,8 +3,9 @@ package tech.jiangchen.btree;
 import tech.jiangchen.struct.TreeNode;
 
 import java.util.ArrayList;
+import java.util.Deque;
+import java.util.LinkedList;
 import java.util.List;
-import java.util.Stack;
 
 /**
  * @author jiangchen
@@ -34,7 +35,7 @@ public class PreOrderTraversal {
         if (root == null) {
             return result;
         }
-        Stack<TreeNode> stack = new Stack<>();
+        Deque<TreeNode> stack = new LinkedList<>();
         stack.push(root);
         while (!stack.isEmpty()) {
             TreeNode tmp = stack.pop();
