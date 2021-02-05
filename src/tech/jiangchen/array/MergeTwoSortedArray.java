@@ -12,7 +12,7 @@ public class MergeTwoSortedArray {
      * 合并两个有序数组
      */
 
-    public void merge1(int[] nums1, int m, int[] nums2, int n) {
+    public void merge(int[] nums1, int m, int[] nums2, int n) {
         int len1 = m - 1;
         int len2 = n - 1;
         int len = m + n - 1;
@@ -26,15 +26,10 @@ public class MergeTwoSortedArray {
         System.out.println(Arrays.toString(nums1));
     }
 
-    public void merge2(int[] nums1, int m, int[] nums2, int n) {
-
-        System.out.println(Arrays.toString(nums1));
-    }
-
     public static void main(String[] args) {
         int[] a = new int[]{1, 3, 5, 0, 0};
         int[] b = new int[]{2, 4};
         MergeTwoSortedArray demo = new MergeTwoSortedArray();
-        demo.merge1(a, a.length - b.length, b, b.length);
+        demo.merge(a, a.length - b.length, b, b.length);
     }
 }
