@@ -11,16 +11,17 @@ public class BinarySearch {
      * 写一个函数搜索nums中的 target，如果目标值存在返回下标，否则返回 -1。
      */
     public int binarySearch1(int[] nums, int target) {
-        int pivot, left = 0, right = nums.length - 1;
+        int left = 0;
+        int right = nums.length - 1;
         while (left <= right) {
-            pivot = (left + right) / 2;
+            int pivot = (left + right) / 2;
             if (nums[pivot] == target) {
                 return pivot;
             }
-            if (target < nums[pivot]) {
-                right = pivot - 1;
-            } else {
+            if (nums[pivot] < right) {
                 left = pivot + 1;
+            } else {
+                right = pivot - 1;
             }
         }
         return -1;
@@ -33,14 +34,12 @@ public class BinarySearch {
     public int binarySearch2(int[] nums, int target) {
         int i = 0;
         int j = nums.length - 1;
-        int mid = (i + j) / 2;
         while (i <= j) {
+            int mid = (i + j) / 2;
             if (nums[mid] < target) {
                 i = mid + 1;
-                mid = (i + j) / 2;
             } else if (mid > 0 && nums[mid - 1] >= target) {
                 j = mid - 1;
-                mid = (i + j) / 2;
             } else {
                 return mid + 1;
             }
