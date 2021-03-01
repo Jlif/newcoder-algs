@@ -13,6 +13,9 @@ public class GetLeastNumbers {
     //方法一：直接使用Java内置的优先队列
     public ArrayList<Integer> getLeastNumbers(int[] input, int k) {
         ArrayList<Integer> result = new ArrayList<>();
+        if (input == null || k <= 0 || k > input.length) {
+            return result;
+        }
         //默认小顶堆，需要重写比较器，大顶堆
         Queue<Integer> queue = new PriorityQueue<>(k, (o1, o2) -> o2 - o1);
         for (int i : input) {
